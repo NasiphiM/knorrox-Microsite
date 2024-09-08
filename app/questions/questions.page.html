@@ -1,0 +1,3 @@
+<ion-content [fullscreen]="true">
+  <app-question [question]="questions[currentQuestion]" (next)="onNextQuestion($event)" [questionNo]="currentQuestion+1"></app-question>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-grid *ngIf="question == null">
+  <ion-row>
+    <ion-col> No question selected!</ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid class="ion-text-center" *ngIf="question != null" style="height:100%;">
+
+  <ion-row class="ion-justify-content-center questionBackground" style="">
+    <ion-col>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1> Question {{questionNo}}</h1>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-padding-horizontal">
+          <h3> {{question.questionText}}</h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center" style="margin-top:28px;">
+    <ion-col size="5" offset="0.5" *ngFor="let option of question.options; index as x">
+      <app-answer-button-option
+           [optionNumber]="optionNumbers[x]"
+           [optionText]="option.answerText"
+           [isCorrect] = "option.isCorrect"
+           (answerSelected)="onSelected(option)"
+           [disabled]="isAnswered"
+         >
+      </app-answer-button-option>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row *ngIf="isAnswered">
+    <ion-col class="ion-text-center"
+      size="8" offset="3">
+      <ion-button (click)="onNext()">Next <ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+

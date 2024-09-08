@@ -1,0 +1,30 @@
+ion-grid{
+  height:100%;
+}
+
+ion-button{
+  margin-top:28px;
+}
+ion-content {
+  // default background unless otherwise specified in the class specifics below
+  --background: url("/assets/images/Background.png") no-repeat bottom right/cover;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+h1{
+  margin-top: 60px;
+  font-size:50px;
+}
+ion-button {
+  margin-top: 20px;
+  height: 90px;
+  outline: var(--ion-color-primary) solid 5px;
+  border-radius: 15px;
+  font-weight: bolder;
+  font-size: x-large;
+
+}
+ion-button[disabled]{
+  opacity: 0.75;
+}

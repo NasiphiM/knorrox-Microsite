@@ -1,0 +1,17 @@
+ion-button{
+  margin-top: 20px;
+  height: 90px;
+  width: 100%;
+  outline: var(--ion-color-primary) solid 5px;
+  border-radius: 15px;
+
+}
+.answerOption
+{
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+ion-button[disabled]{
+  opacity: 0.75;
+}

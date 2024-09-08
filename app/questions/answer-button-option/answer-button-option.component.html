@@ -1,0 +1,13 @@
+<ion-button
+  expand="block"
+  (click)="onClick()"
+  [disabled]="disabled"
+  [color]="isSelected ? (isCorrect ? 'success' : 'danger') : 'primary' "
+>
+  <ion-grid>
+    <ion-row class="answerOption">
+      <ion-col size="1">{{optionNumber}} </ion-col>
+      <ion-col class="ion-text-wrap">{{optionText}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-button>

@@ -1,0 +1,10 @@
+app-answer-button-option{
+  margin-bottom: 10px;
+}
+ion-content {
+  // default background unless otherwise specified in the class specifics below
+  --background: url("/assets/images/Background.png") no-repeat bottom right/cover;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
